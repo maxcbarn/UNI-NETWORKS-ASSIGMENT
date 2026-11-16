@@ -7,7 +7,7 @@ echo "options {
 
     recursion yes;
     allow-recursion { localhost; 192.168.10.0/24; };
-    listen-on { 127.0.0.1; 192.168.10.1; }; 
+    listen-on { any; }; 
     allow-query { localhost; 192.168.10.0/24; };
     allow-transfer { none; };
 
@@ -73,7 +73,11 @@ sudo named-checkzone cardeal.local /etc/bind/zones/db.cardeal.local
 
 sudo named-checkzone 10.168.192.in-addr.arpa /etc/bind/zones/db.192.168.10
 
+sudo systemctl stop bind9
+
 sudo systemctl restart bind9
+
+sudo systemctl stop named
 
 sudo systemctl restart named
 
