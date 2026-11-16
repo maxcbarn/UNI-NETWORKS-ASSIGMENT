@@ -3,11 +3,11 @@ sudo ufw allow Bind9
 rm -f /etc/bind/named.conf.options
 
 echo "options {
-    directory "/var/cache/bind";
+    directory \"/var/cache/bind\";
 
     recursion yes;
     allow-recursion { localhost; 192.168.10.0/24; };
-    listen-on {  localhost; 192.168.10.0/24; };  
+    listen-on { 127.0.0.1; 192.168.10.1; }; 
     allow-query { localhost; 192.168.10.0/24; };
     allow-transfer { none; };
 
