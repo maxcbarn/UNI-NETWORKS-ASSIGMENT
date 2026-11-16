@@ -73,5 +73,10 @@ sudo named-checkzone cardeal.local /etc/bind/zones/db.cardeal.local
 
 sudo named-checkzone 10.168.192.in-addr.arpa /etc/bind/zones/db.192.168.10
 
-
 sudo systemctl restart bind9
+
+sudo systemctl restart named
+
+sudo systemctl status named
+
+sudo ss -tulnp | grep :53
