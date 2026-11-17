@@ -1,6 +1,6 @@
 sudo apt install apache2 -y
 
-sudo ufw allow 'Apache Full
+sudo ufw allow 'Apache Full'
 
 rm -r /var/www/cardeal.local
 
