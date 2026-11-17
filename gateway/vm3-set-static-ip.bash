@@ -13,7 +13,7 @@ echo "network:
             nameservers:
                 addresses:
                     - 192.168.10.10
-                search: ["~cardeal.local"]
+                search: [\"~cardeal.local\"]
     version: 2" >> /etc/netplan/00-installer-config.yaml
 
 sudo netplan apply
