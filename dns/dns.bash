@@ -77,9 +77,9 @@ sudo named-checkzone 10.168.192.in-addr.arpa /etc/bind/zones/db.192.168.10
 
 sudo systemctl stop bind9
 
-sudo systemctl restart bind9
-
 sudo systemctl stop named
+
+sudo systemctl restart bind9
 
 sudo systemctl restart named
 
