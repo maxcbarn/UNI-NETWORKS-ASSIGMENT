@@ -50,7 +50,9 @@ sudo bash -c 'echo "\$TTL    604800
 @       IN      MX  10  mail.cardeal.local.
 
 ns1     IN      A       192.168.10.10
-mail    IN      A       192.168.10.20" > /etc/bind/zones/db.cardeal.local'
+mail    IN      A       192.168.10.20
+@       IN      A       192.168.10.10
+www     IN      A       192.168.10.10" > /etc/bind/zones/db.cardeal.local'
 
 sudo bash -c 'echo "\$TTL    604800
 @       IN      SOA     ns1.cardeal.local. admin.cardeal.local. (
@@ -63,7 +65,8 @@ sudo bash -c 'echo "\$TTL    604800
 @       IN      NS      ns1.cardeal.local.
 
 10      IN      PTR     ns1.cardeal.local.
-20      IN      PTR     mail.cardeal.local." > /etc/bind/zones/db.192.168.10'
+20      IN      PTR     mail.cardeal.local.
+10      IN      PTR     www.cardeal.local." > /etc/bind/zones/db.192.168.10'
 
 
 sudo named-checkconf
