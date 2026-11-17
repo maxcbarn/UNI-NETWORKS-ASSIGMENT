@@ -66,7 +66,6 @@ sudo bash -c 'echo "\$TTL    604800
 20      IN      PTR     mail.cardeal.local." > /etc/bind/zones/db.192.168.10'
 
 
-
 sudo named-checkconf
 
 sudo named-checkzone cardeal.local /etc/bind/zones/db.cardeal.local
