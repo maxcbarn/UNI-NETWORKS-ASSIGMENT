@@ -13,6 +13,8 @@ echo "subnet 192.168.10.0 netmask 255.255.255.0 {
   option domain-name-servers 192.168.10.10;
   default-lease-time 600;
   max-lease-time 7200;
+  option domain-name \"cardeal.local\";
+  option domain-search \"cardeal.local\";
 }" >> /etc/dhcp/dhcpd.conf
 
 sudo systemctl restart isc-dhcp-server
