@@ -6,10 +6,16 @@ echo "network:
         enp0s3:
             dhcp4: true
             dhcp6: true
+            nameservers:
+                addresses:
+                    - 192.168.10.10
         enp0s8:
             dhcp4: false
             addresses:
                 - 192.168.10.1/24
+            nameservers:
+                addresses:
+                    - 192.168.10.10
     version: 2" >> /etc/netplan/00-installer-config.yaml
 
 

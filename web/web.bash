@@ -7,7 +7,7 @@ rm -r /var/www/cardeal.local
 sudo mkdir -p /var/www/cardeal.local
 
 cp index.html /var/www/cardeal.local
-cp hazel_dance.jpg /var/www/cardeal.local
+cp hazel_dance.gif /var/www/cardeal.local
 
 sudo chmod -R 755 /var/www/cardeal.local
 
