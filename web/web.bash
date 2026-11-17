@@ -24,9 +24,6 @@ echo "<VirtualHost *:80>
         AllowOverride All
         Require all granted
     </Directory>
-
-    ErrorLog ${APACHE_LOG_DIR}/cardeal.local_error.log
-    CustomLog ${APACHE_LOG_DIR}/cardeal.local_access.log combined
 </VirtualHost>" >> /etc/apache2/sites-available/cardeal.local.conf
 
 sudo a2ensite cardeal.local.conf

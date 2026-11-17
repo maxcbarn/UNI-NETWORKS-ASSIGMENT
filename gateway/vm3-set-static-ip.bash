@@ -12,8 +12,7 @@ echo "network:
                   via: 192.168.10.1
             nameservers:
                 addresses:
-                    - 8.8.8.8
-                    - 1.1.1.1
+                    - 192.168.10.10
     version: 2" >> /etc/netplan/00-installer-config.yaml
 
 sudo netplan apply
